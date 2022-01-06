@@ -2,11 +2,13 @@ import { Fragment } from "react"
 
 
 
-const TableHeader = () =>{
+const TableHeader = ({headers}) =>{
     return(
-        <Fragment>
-
-        </Fragment>
+            <thead>
+                <tr>
+                    {headers.map((head)=> (<th key={headers.field}>{headers.name}</th>))}
+                </tr>
+            </thead>
     )
 }
 
